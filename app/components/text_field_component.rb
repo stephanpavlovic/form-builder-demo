@@ -8,7 +8,11 @@ class TextFieldComponent < ViewComponent::Base
     @model = model
   end
 
+  def input_id
+    "#{model}_#{name}"
+  end
+
   def label
-    I18n.t("activemodel.attributes.#{model}.#{name}")
+    I18n.t("activerecord.attributes.#{model}.#{name}")
   end
 end
