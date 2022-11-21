@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<a href="https://www.loom.com/share/8b91aa99616e40779c61dcb690db47c3">
+  <p>Form builder for floating labels - Watch Video</p>
+  <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/8b91aa99616e40779c61dcb690db47c3-with-play.gif">
+</a>
