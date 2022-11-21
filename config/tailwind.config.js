@@ -12,11 +12,20 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      transformOrigin: {
+        "0": "0%",
+      },
+      zIndex: {
+        "-1": "-1",
+      },
     },
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
-  ]
+  ],
+  variants: {
+    borderColor: ['responsive', 'hover', 'focus', 'focus-within'],
+  }
 }
