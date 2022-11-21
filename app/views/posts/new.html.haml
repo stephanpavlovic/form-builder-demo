@@ -1,14 +1,15 @@
-%h1.text-3xl.font-bold.underline
+%h1.text-3xl.font-bold.underline.mb-4
   New post
 
 
-= form_with model: @post, class: 'space-y-8 divide-y divide-gray-200' do |f|#, builder: LabellingFormBuilder do |f|
-  .space-y-6.sm:space-y-5
-    = f.label :headline, class: 'block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2'
-    = f.text_field :headline,  placeholder: "Headline", class: 'block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
-  .space-y-6.sm:space-y-5
-    = f.label :body, class: 'block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2'
-    = f.text_area :body, class: 'block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
-  .space-y-6.sm:space-y-5
-    %div
+= form_with model: @post do |f|
+  .mb-4
+    .relative.my-4.border-2.focus-within:border-blue-500
+      = f.text_field :headline, placeholder: '', class: 'block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500'
+      %label.absolute.top-0.p-4.text-lg.-z-1.duration-300.bg-white.origin-0{for: 'headline'}= f.label :headline
+  .mb-4
+    .relative.my-4.border-2.focus-within:border-blue-500
+      = f.text_area :body, placeholder: '', class: 'block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500'
+      %label.absolute.top-0.p-4.text-lg.-z-1.duration-300.bg-white.origin-0{for: 'body'}= f.label :body
+  .mb-4
     = f.button "Save", class: 'inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'

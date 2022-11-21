@@ -1,2 +1,5 @@
 %h1.text-3xl.font-bold.underline
   Posts
+.relative.my-4.border-2.focus-within:border-blue-500
+  %input#floating_outlined.block.p-4.w-full.text-lg.appearance-none.focus:outline-none.bg-transparent{type: 'text', placeholder: ''}
+  %label.absolute.top-0.p-4.text-lg.-z-1.duration-300.bg-white.origin-0{for: "floating_outlined"} Test
